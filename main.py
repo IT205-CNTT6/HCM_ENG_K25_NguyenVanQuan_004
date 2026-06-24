@@ -91,16 +91,15 @@ class OrderManager:
                 print("ID đơn hàng bị trùng !")
                 continue
             else:
-                break
-        customer_name = get_validate("Nhập tên khách hàng: ")
-        product_name = get_validate("Nhập tên đơn hàng: ")
-        unit_price =get_validate("Nhập đơn giá sản phẩm ","float")
-        quantity = get_validate("Nhập số lượng mua: ","float")
-        shipping_fee = get_validate("Nhập phí vận chuyển: ","float")
-        voucher = get_validate("Nhập số tiền giảm giá: ")
-        new_ord = Order(id_order,customer_name,product_name,unit_price,quantity,shipping_fee,voucher)
-        self.orders.append(new_ord)
-        print("Thêm đơn hàng thành công !")
+                customer_name = get_validate("Nhập tên khách hàng: ")
+                product_name = get_validate("Nhập tên đơn hàng: ")
+                unit_price =get_validate("Nhập đơn giá sản phẩm ","float")
+                quantity = get_validate("Nhập số lượng mua: ","float")
+                shipping_fee = get_validate("Nhập phí vận chuyển: ","float")
+                voucher = get_validate("Nhập số tiền giảm giá: ")
+                new_ord = Order(id_order,customer_name,product_name,unit_price,quantity,shipping_fee,voucher)
+                self.orders.append(new_ord)
+                print("Thêm đơn hàng thành công !")
     
     def update_order(self):
         id_order = get_validate("Nhập id cần cập nhật: ")

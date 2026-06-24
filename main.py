@@ -100,6 +100,7 @@ class OrderManager:
                 new_ord = Order(id_order,customer_name,product_name,unit_price,quantity,shipping_fee,voucher)
                 self.orders.append(new_ord)
                 print("Thêm đơn hàng thành công !")
+                break
     
     def update_order(self):
         id_order = get_validate("Nhập id cần cập nhật: ")
